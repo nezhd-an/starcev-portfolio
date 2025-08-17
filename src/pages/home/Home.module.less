@@ -26,24 +26,28 @@
 
 .preview__title {
   color: @secondary-text-color;
+}
 
-  img {
-    vertical-align: bottom;
+.preview__avatar {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 66px;
+  height: 66px;
+  background-image: url('@/assets/images/ruslanAvatar.png');
+  background-size: contain;
 
-    .to(@break-md, {
-      width: 35px;
-      height: 35px;
-      margin-bottom: 4px;
-    });
-  }
+  .to(@break-md, {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 4px;
+  });
 }
 
 .preview__sub-title {
   color: @primary-text-color;
-  margin-left: 30px;
 
-  .to(@break-md, {
-    margin-left: 0px;
+  .from(@break-md, {
+    margin-left: 30px;
   });
 }
 
