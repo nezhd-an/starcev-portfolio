@@ -1,0 +1,49 @@
+@import '@/styles/variables.less';
+@import '@/styles/mixins.less';
+
+.project {
+  .flex-column;
+  flex: 1 1 calc(50% - 12px);
+  min-width: 343px; 
+  border-radius: @radius-md;
+  background: @background-block-color;
+  cursor: pointer;
+}
+
+.project__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  letter-spacing: 0.5px;
+}
+
+.project__title {
+  .font(24px, 28px, 400);
+  margin-bottom: 6px;
+
+  .to(@break-md, {
+    .font(18px, 22px, 400);
+    margin-bottom: 4px;
+  });
+}
+
+.project__date {
+  .font(14px, 16px, 400);
+  letter-spacing: 0.3px;
+  color: @third-text-color;
+}
+
+.project__type {
+  height: 32px;
+  border-radius: 9999px;
+  .font(14px, 16px, 400);
+  padding: 8px 10px;
+
+  &--web {
+    background-color: #164BFA;
+  }
+
+  &--mobile {
+    background-color: #FA6616;
+  }
+}

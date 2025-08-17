@@ -1,0 +1,54 @@
+@import '@/styles/variables.less';
+@import '@/styles/mixins.less';
+
+.nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 194px;
+  height: 46px;
+  padding: 4px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: @background-block-color;
+  border-radius: 9999px;
+  border: 0.5px solid @border-color;
+  z-index: 1;
+
+  .to(@break-md, {
+    bottom: 20px;
+  });
+
+  .from(@break-md, {
+    top: 20px;
+  });
+}
+
+.nav__list {
+  display: flex;
+  height: 100%;
+}
+
+.nav__item {
+  flex: 1;
+  .flex-center;
+  .font(16px, 22px, 400);
+  color: @secondary-text-color;
+  border-radius: 9999px;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: @primary-text-color;
+    background: @background-block-color;
+  }
+}
+
+.nav__item--active {
+  color: @primary-text-color;
+  background: @background-secondary-color;
+
+  &:hover {
+    background: @background-secondary-color;
+  }
+}

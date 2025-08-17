@@ -1,0 +1,28 @@
+@import '@/styles/variables.less';
+@import '@/styles/mixins.less';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.footer__author {
+  .font(16px, 22px, 400);
+  letter-spacing: 0.2px;
+  color: @third-text-color;
+}
+
+.footer__arrow-top {
+  display: block;
+  padding: 12px;
+  background: @background-secondary-color;
+  border-radius: @radius-sm;
+  cursor: pointer;
+  transition: background .3s ease;
+
+  &:hover {
+    background: #F1EDED1A;
+  }
+}

@@ -1,0 +1,28 @@
+.font(@size, @lineHeight, @font-weight: 500) {
+  font-size: @size;
+  line-height: @lineHeight;
+  font-weight: @font-weight;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.to(@max_width, @content) {
+  @media (max-width: (@max_width - 0.02px)) {
+    @content();
+  }
+}
+
+.from(@min_width, @content) {
+  @media (min-width: @min_width) {
+    @content();
+  }
+}

@@ -1,0 +1,31 @@
+@import '@/styles/variables.less';
+@import '@/styles/mixins.less';
+
+.about-me {
+  margin-top: 126px;
+
+  .to(@break-md, {
+    margin-top: 60px;
+  });
+}
+
+.about-me__photo {
+  .to(@break-md, {
+    width: 36px;
+    height: 36px;
+  })
+}
+
+.about-me__name {
+  .font(44px, 48px);
+
+  .to(@break-md, {
+    .font(32px, 36px);
+  });
+}
+
+.about-me__desription {
+  .font(16px, 22px);
+  margin-top: 16px;
+  max-width: 628px;
+}
